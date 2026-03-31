@@ -1,0 +1,53 @@
+@use './_variables' as v;
+@use './base/_reset';
+@use './components/_header';
+@use './components/_hero';
+@use './components/about';
+@use './components/_scroll-scrub-video';
+@use './components/about-gallery';
+@use './components/_footer';
+@use './components/_steps';
+@use './components/_legion';
+@use './components/_about-features';
+@use './components/_window-panorama-fx.scss';
+
+/* Botones simples (opcional) */
+.btn{
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .9rem 1.2rem;
+  border-radius: 14px;
+  background: v.$color-primary;
+  color: #0a0a0a;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  transition: transform .15s ease, filter .15s ease;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  &:hover{ transform: translateY(-1px); filter: brightness(1.04); }
+  &.btn-wa{ background: v.$color-wa; }
+}
+
+/* Resto de secciones (ejemplo) */
+.gamas{
+  padding: 56px 0 80px;
+  h2{ margin: 0 16px 20px; }
+  .gamas-grid{
+    display: grid; gap: 16px; padding: 0 16px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  .gama-card{
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px; padding: 16px; background: rgba(255,255,255,.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  }
+}
+
+.error{ color: v.$color-error; }
+.footer{ padding: 32px 16px; opacity: .7; }
